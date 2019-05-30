@@ -13,9 +13,22 @@ After graduating my master degree I wanted to share the application I've made to
 - Orders `activity_profile.xml` : This page shows the shipped, in process and canceled orders.
 
 
+### Libraries Used:
+| Library | Link |
+| ------ | ------ |
+| FancyButtons | [/medyo/Fancybuttons][fbl] |
+| CircleImageView | [/hdodenhof/CircleImageView][circularimg] |
+| Glide | [/bumptech/glide][glidelib] |
+| Android-Image-Slider | [/smarteist/android-image-slider][sliderlib] |
+
 ### Developed By:
 Karimi Amine  
 Contact me on : [facebook] 
 
 
 [facebook]: <https://www.facebook.com/amine.karimiii>
+[fbl]: <https://github.com/medyo/Fancybuttons>
+[circularimg]: <https://github.com/hdodenhof/CircleImageView>
+[glidelib]: <https://github.com/bumptech/glide>
+[sliderlib]: <https://github.com/smarteist/android-image-slider>
+
