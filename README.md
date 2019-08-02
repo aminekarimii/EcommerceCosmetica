@@ -3,6 +3,9 @@
 Cosmetica is an android project based on Firebsase Firestore.  
 After graduating my master degree I wanted to share the application I've made to complete my second year, so other people can use it in a free way.  
 
+![Screenshot1](screen1.png)
+![Screenshot2](screen2.png)
+
 ### Functions : 
 - Register Page `register.xml` (Firebase Authentication)
 - Login Page `login.xml` : Using Facebook or Email&Password (Firebase Authentication)
