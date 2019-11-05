@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".UI.Seller.AddProduct">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/picture_added"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/md_purple_50"
+            android:src="@drawable/ic_add" />
+
+        <LinearLayout
+            android:id="@+id/linear_nom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/picture_added"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="*TITRE"
+                android:textColor="@color/md_black_1000"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/fieldAddNom"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/back_edit"
+                android:hint="Eyelashe For your eye lashes .."
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/md_black_1000"
+                android:textColorHint="@color/md_purple_50" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_categorie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_nom"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="*CATEGORIE"
+                android:textColor="@color/md_black_1000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/back_edit"
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_categorie"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/montserrat_bold"
+                android:text="DESCRIPTION"
+                android:textColor="@color/md_black_1000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/fieldAddDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/back_edit"
+                android:gravity="top|start"
+                android:hint="*Description"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:minLines="6"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:singleLine="true"
+                android:textColor="@color/md_black_1000"
+                android:textColorHint="@color/md_purple_50" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_desc"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:fontFamily="@font/montserrat_bold"
+                android:text="*PRIX"
+                android:textColor="@color/md_black_1000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/fieldAddPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/back_edit"
+                android:gravity="top|start"
+                android:hint="ex: 19.99"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:textColor="@color/md_black_1000"
+                android:textColorHint="@color/md_purple_50" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_price"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/add_product_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear_img"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="90dp"
+            android:paddingTop="10dp"
+            android:paddingRight="90dp"
+            android:paddingBottom="10dp"
+            android:text="ADD Product"
+            fancy:fb_borderColor="#FFFFFF"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="@color/md_green_500"
+            fancy:fb_radius="6dp"
+            fancy:fb_textColor="#FFFFFF"
+            fancy:fb_textSize="16dp" />
+
+
+    </RelativeLayout>
+</ScrollView>

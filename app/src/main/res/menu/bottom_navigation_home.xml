@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home_button"
+        android:icon="@drawable/ic_clipboard"
+        android:title="Commandes" />
+    <item
+        android:id="@+id/navigation_cart"
+        android:icon="@drawable/ic_cart2"
+        android:title="Pannier" />
+    <item
+        android:id="@+id/profil_button"
+        android:icon="@drawable/ic_profil"
+        android:title="Profil" />
+
+</menu>

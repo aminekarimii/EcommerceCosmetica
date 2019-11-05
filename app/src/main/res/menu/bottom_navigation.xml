@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_shop"
+        android:icon="@drawable/gradient_image_holder"
+        android:title="@string/title_shop" />
+
+    <item
+        android:id="@+id/navigation_cart"
+        android:icon="@drawable/gradient_image_holder"
+        android:title="@string/title_cart" />
+
+</menu>

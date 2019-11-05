@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".UI.Seller.SellerHome"
+    tools:showIn="@layout/app_bar_seller_home">
+
+    <LinearLayout
+        android:id="@+id/stats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Vos Produits:"
+                android:textAlignment="center"
+                android:textColor="@color/md_black_1000" />
+
+            <TextView
+                android:id="@+id/productcounts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="23"
+                android:textAlignment="center"
+                android:textColor="@color/md_light_blue_400"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleSeller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stats"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Gerer votre magasin"
+        android:textAlignment="center"
+        android:textColor="@color/md_black_1000"
+        android:textSize="21sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleSeller"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/products_seller"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_margin="@dimen/margin_cardview_leader"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:elevation="@dimen/elevation__cardview_leader"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                app:cardBackgroundColor="@color/md_blue_400"
+                app:cardCornerRadius="@dimen/radius_cardview_leader"
+                app:cardElevation="@dimen/elevation__cardview_leader">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/widthheight_imageviw_cardview_leader"
+                        android:layout_height="@dimen/widthheight_imageviw_cardview_leader"
+                        android:src="@drawable/ic_product" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Produits"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsiwe_cardview_leader" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/orders_seller"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_margin="@dimen/margin_cardview_leader"
+                android:layout_weight="1"
+                android:elevation="@dimen/elevation__cardview_leader"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/md_blue_400"
+                app:cardCornerRadius="@dimen/radius_cardview_leader"
+                app:cardElevation="@dimen/elevation__cardview_leader"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/widthheight_imageviw_cardview_leader"
+                        android:layout_height="@dimen/widthheight_imageviw_cardview_leader"
+                        android:src="@drawable/ic_orders" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Commandes"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsiwe_cardview_leader" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

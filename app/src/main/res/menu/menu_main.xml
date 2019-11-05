@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.classroom.app1.MainActivity">
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_icon_profile"
+        android:title="@string/profile"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/orders"
+                android:title="Mes commandes"/>
+            <item
+                android:id="@+id/logout"
+                android:title="Déconnecter"/>
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "501709924103",
+    "firebase_url": "https://testproject-25d34.firebaseio.com",
+    "project_id": "testproject-25d34",
+    "storage_bucket": "testproject-25d34.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501709924103:android:47b96d90cc9bd87f",
+        "android_client_info": {
+          "package_name": "com.classroom.app1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501709924103-96lgqmd8t5ou2lr2ef2ssb73tnsusb7d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.classroom.app1",
+            "certificate_hash": "73a2763a683d6a2ec145437c2a4aa0728519ea77"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVf7YxGv4gPaRV_Oh2EEkonae5SnpGfqE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501709924103-9nr8gdauujjreiul4ng3l4uf1rclbh4l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
