@@ -1,4 +1,4 @@
-package com.classroom.app1.UI;
+package com.classroom.app1.orders;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -7,27 +7,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 
 import com.classroom.app1.Helpers.BaseActivity;
-import com.classroom.app1.Helpers.DataStatus;
-import com.classroom.app1.Helpers.Singleton;
-import com.classroom.app1.Model.Order;
-import com.classroom.app1.Model.Product;
 import com.classroom.app1.R;
-import com.classroom.app1.UI.Adapters.UserOrdersAdapter;
-import com.classroom.app1.UI.Fragements.InProcessOrders;
-import com.classroom.app1.UI.Fragements.ShippedOrders;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
+import com.classroom.app1.UI.fragments.InProcessOrders;
+import com.classroom.app1.UI.fragments.ShippedOrders;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class UsersOrders extends BaseActivity {
 

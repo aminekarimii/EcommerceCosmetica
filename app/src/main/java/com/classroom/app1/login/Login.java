@@ -1,4 +1,4 @@
-package com.classroom.app1.UI;
+package com.classroom.app1.login;
 
 
 import android.content.Intent;
@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import com.classroom.app1.Helpers.BaseActivity;
 import com.classroom.app1.R;
+import com.classroom.app1.UI.HomeActivity;
+import com.classroom.app1.UI.Register;
 import com.classroom.app1.UI.Seller.SellerHome;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -22,8 +24,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 
 public class Login extends BaseActivity implements View.OnClickListener {
 
@@ -151,7 +151,7 @@ public class Login extends BaseActivity implements View.OnClickListener {
     public void onClick(View v) {
         int i = v.getId();
         if (i == R.id.emailCreateAccountButton) {
-            Intent my = new Intent(this,Register.class);
+            Intent my = new Intent(this, Register.class);
             startActivity(my);
         } else if (i == R.id.emailSignInButton) {
             signIn(mEmailField.getText().toString(), mPasswordField.getText().toString());

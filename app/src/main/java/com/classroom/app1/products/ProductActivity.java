@@ -1,4 +1,4 @@
-package com.classroom.app1.UI;
+package com.classroom.app1.products;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

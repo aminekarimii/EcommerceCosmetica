@@ -1,4 +1,4 @@
-package com.classroom.app1.API;
+package com.classroom.app1.api;
 
 import android.support.annotation.NonNull;
 

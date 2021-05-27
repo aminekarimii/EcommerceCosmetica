@@ -1,4 +1,4 @@
-package com.classroom.app1.UI.Adapters;
+package com.classroom.app1.cart;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -13,26 +13,25 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.classroom.app1.Model.Product;
 import com.classroom.app1.R;
-import com.classroom.app1.UI.ClickListeners.RecyclerViewClickListenerProduct;
 
 import java.util.ArrayList;
 
-public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHolder> {
+public class CartProductAdapter extends RecyclerView.Adapter<CartProductAdapter.ViewHolder> {
 
     private ArrayList<Product> products;
     private Context context;
-    private RecyclerViewClickListenerProduct mClickListener;
+    //private RecyclerViewClickListenerProduct mClickListener;
 
-    public ProductAdapter(ArrayList<Product> products, Context context, RecyclerViewClickListenerProduct mClickListener) {
+    public CartProductAdapter(ArrayList<Product> products, Context context) {
         this.products = products;
         this.context = context;
-        this.mClickListener = mClickListener;
+        //this.mClickListener = mClickListener;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.product_card_list,
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.produit_card,
                 viewGroup, false);
         return new ViewHolder(v);
     }
@@ -51,7 +50,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         return products.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         Product mProduct;
         ImageView productImg;
@@ -61,11 +60,11 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
 
         ViewHolder(View v) {
             super(v);
-            productImg = itemView.findViewById(R.id.product_img);
-            produitNom = itemView.findViewById(R.id.product_title);
-            produitPrice = itemView.findViewById(R.id.product_price);
+            productImg = itemView.findViewById(R.id.product_img_cart);
+            produitNom = itemView.findViewById(R.id.product_title_cart);
+            produitPrice = itemView.findViewById(R.id.product_price_cart);
 
-            v.setOnClickListener(this);
+            //v.setOnClickListener(this);
         }
 
         @SuppressLint("SetTextI18n")
@@ -73,19 +72,18 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
 
             this.mProduct = products;
             produitNom.setText(mProduct.getNom());
-            produitPrice.setText(""+mProduct.getPrice()+"MAD");
+            produitPrice.setText(mProduct.getPrice().toString()+"MAD");
 
 
             Glide
                     .with(context)
-                    .load(mProduct.getImg().get(0).toString())
-                    //.asBitmap()
+                    .load(mProduct.getImg_product())
                     .into(productImg);
         }
 
-        @Override
-        public void onClick(View view) {
+        //@Override
+        /*public void onClick(View view) {
             mClickListener.onClick(view, mProduct);
-        }
+        }*/
     }
 }

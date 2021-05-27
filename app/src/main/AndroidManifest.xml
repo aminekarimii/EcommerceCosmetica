@@ -22,11 +22,11 @@
 
         </activity>
         <activity android:name=".UI.Seller.AddProduct" />
-        <activity android:name=".UI.UsersOrders" />
-        <activity android:name=".UI.Cart" />
+        <activity android:name=".orders.UsersOrders" />
+        <activity android:name=".cart.CartActivity" />
         <activity android:name=".UI.Register" />
         <activity android:name=".Helpers.BaseActivity" />
-        <activity android:name=".UI.Login">
+        <activity android:name=".login.Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,13 +34,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".UI.ProductActivity"
+            android:name=".products.ProductActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".UI.Profil"
+            android:name=".profil.ProfilActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".UI.ProductsListActivity"
+            android:name=".products.ProductsListActivity"
             android:theme="@style/AppTheme" >
         </activity>
         <activity

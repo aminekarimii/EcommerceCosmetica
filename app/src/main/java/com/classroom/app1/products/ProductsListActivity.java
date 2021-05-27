@@ -1,4 +1,4 @@
-package com.classroom.app1.UI;
+package com.classroom.app1.products;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,7 +15,6 @@ import com.classroom.app1.Helpers.DataStatus;
 import com.classroom.app1.Helpers.Singleton;
 import com.classroom.app1.Model.Product;
 import com.classroom.app1.R;
-import com.classroom.app1.UI.Adapters.ProductAdapter;
 import com.classroom.app1.UI.ClickListeners.RecyclerViewClickListenerProduct;
 import com.classroom.app1.UI.Seller.AddProduct;
 import com.google.android.gms.tasks.OnCompleteListener;

@@ -3,10 +3,6 @@ package com.classroom.app1.UI.Seller;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.widget.CardView;
-import android.util.Log;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -19,26 +15,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.TextView;
 
-import com.classroom.app1.Helpers.DataStatus;
 import com.classroom.app1.Helpers.Singleton;
-import com.classroom.app1.Model.Order;
-import com.classroom.app1.Model.Product;
 import com.classroom.app1.R;
-import com.classroom.app1.UI.Login;
-import com.classroom.app1.UI.ProductsListActivity;
-import com.classroom.app1.UI.Profil;
+import com.classroom.app1.login.Login;
+import com.classroom.app1.products.ProductsListActivity;
+import com.classroom.app1.profil.ProfilActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
 
 public class SellerHome extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
@@ -94,7 +81,7 @@ public class SellerHome extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_profil) {
-            startActivity(new Intent(this, Profil.class));
+            startActivity(new Intent(this, ProfilActivity.class));
             finishAffinity();
         }
         else if (id == R.id.nav_logout) {

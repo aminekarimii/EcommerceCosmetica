@@ -12,7 +12,7 @@
         tools:layout="@layout/activity_categories" />
     <activity
         android:id="@+id/productActivity"
-        android:name="com.classroom.app1.UI.ProductActivity"
+        android:name="com.classroom.app1.products.ProductActivity"
         android:label="ProductActivity" />
 
 </navigation>

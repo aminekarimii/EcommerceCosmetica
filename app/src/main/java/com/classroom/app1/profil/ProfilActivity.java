@@ -1,4 +1,4 @@
-package com.classroom.app1.UI;
+package com.classroom.app1.profil;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -20,6 +20,8 @@ import com.bumptech.glide.Glide;
 import com.classroom.app1.Helpers.BaseActivity;
 import com.classroom.app1.Helpers.DataStatusImage;
 import com.classroom.app1.R;
+import com.classroom.app1.orders.UsersOrders;
+import com.classroom.app1.login.Login;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -40,7 +42,7 @@ import java.util.UUID;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class Profil extends BaseActivity implements View.OnClickListener {
+public class ProfilActivity extends BaseActivity implements View.OnClickListener {
     private static final String TAG = "Profile";
     FirebaseFirestore db;
     FirebaseAuth mAuth;
@@ -120,13 +122,13 @@ public class Profil extends BaseActivity implements View.OnClickListener {
             uploadImage(new DataStatusImage() {
                 @Override
                 public void onSuccess(final Uri uri) {
-                    Glide.with(Profil.this).load(uri).into(profilImg);
+                    Glide.with(ProfilActivity.this).load(uri).into(profilImg);
                     Map<String, Object> data = new HashMap<>();
                     data.put("image", uri.toString());
 
                     db.collection("Users").document(mAuth.getUid())
                             .set(data, SetOptions.merge());
-                    Toast.makeText(Profil.this, "uploaded", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ProfilActivity.this, "uploaded", Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
@@ -187,7 +189,7 @@ public class Profil extends BaseActivity implements View.OnClickListener {
                                         Uri downloadUri = task.getResult();
                                         statusImageCallback.onSuccess(downloadUri);
                                     } else {
-                                        Toast.makeText(Profil.this, "Error", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(ProfilActivity.this, "Error", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });
@@ -201,7 +203,7 @@ public class Profil extends BaseActivity implements View.OnClickListener {
                         public void onFailure(@NonNull Exception e) {
                             progressDialog.dismiss();
                             statusImageCallback.onError("Error");
-                            Toast.makeText(Profil.this, "Failed " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ProfilActivity.this, "Failed " + e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     })
                     .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {

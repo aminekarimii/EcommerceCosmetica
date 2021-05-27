@@ -1,4 +1,4 @@
-package com.classroom.app1.UI;
+package com.classroom.app1.cart;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -18,7 +18,7 @@ import com.classroom.app1.Helpers.Singleton;
 import com.classroom.app1.Helpers.TinyDB;
 import com.classroom.app1.Model.Product;
 import com.classroom.app1.R;
-import com.classroom.app1.UI.Adapters.CartProductAdapter;
+import com.classroom.app1.orders.UsersOrders;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseUser;
@@ -32,7 +32,7 @@ import java.util.Map;
 
 import mehdi.sakout.fancybuttons.FancyButton;
 
-public class Cart extends AppCompatActivity implements View.OnClickListener {
+public class CartActivity extends AppCompatActivity implements View.OnClickListener {
 
     private CartProductAdapter adapter;
     RecyclerView recyclerView;
@@ -49,7 +49,7 @@ public class Cart extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_cart);
 
         recyclerView = findViewById(R.id.cart_rc);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(Cart.this,
+        LinearLayoutManager layoutManager = new LinearLayoutManager(CartActivity.this,
                 LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
@@ -59,7 +59,7 @@ public class Cart extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void fetchRemoteData() {
-        tinydb = new TinyDB(Cart.this);
+        tinydb = new TinyDB(CartActivity.this);
         ArrayList<Product> productsOnCart = tinydb.getListObject(user.getUid(), Product.class);
         for (int i = 0; i < productsOnCart.size(); i++) {
             Product item = new Product(productsOnCart.get(i).getId_product(),
@@ -85,7 +85,7 @@ public class Cart extends AppCompatActivity implements View.OnClickListener {
     public void onSuccess(ArrayList<Product> posts) {
         TextView total_price = findViewById(R.id.total_price);
         if (adapter == null) {
-            adapter = new CartProductAdapter(posts, Cart.this);
+            adapter = new CartProductAdapter(posts, CartActivity.this);
             recyclerView.setAdapter(adapter);
             if (!posts.isEmpty()) {
                 int totalPrice = 0;
@@ -134,7 +134,7 @@ public class Cart extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.checkout_button) {
-            myDialog = new Dialog(Cart.this);
+            myDialog = new Dialog(CartActivity.this);
             myDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             assert myDialog.getWindow() != null;
             myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -154,7 +154,7 @@ public class Cart extends AppCompatActivity implements View.OnClickListener {
                 @Override
                 public void onClick(View view) {
                     addOrder();
-                    startActivity(new Intent(Cart.this, UsersOrders.class));
+                    startActivity(new Intent(CartActivity.this, UsersOrders.class));
                     myDialog.dismiss();
                 }
             });

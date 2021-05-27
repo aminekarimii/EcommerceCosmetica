@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.ProductsListActivity">
+    tools:context=".products.ProductsListActivity">
 
     <Button
         android:id="@+id/add_product_button_listprodcuts"
